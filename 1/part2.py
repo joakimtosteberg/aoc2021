@@ -1,4 +1,5 @@
 import queue
+import sys
 
 increases = 0
 window_size = 3
@@ -6,7 +7,7 @@ window = queue.Queue(window_size)
 reading_sum = 0
 prev_reading_sum = -1
 
-with open("data") as f:
+with open(sys.argv[1]) as f:
     for line in f:
         reading = int(line)
         reading_sum += reading

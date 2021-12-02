@@ -1,3 +1,5 @@
+import sys
+
 class Submarine:
     def __init__(self):
         self.x = 0
@@ -22,7 +24,7 @@ class Submarine:
 
 sub = Submarine()
 
-with open("data") as f:
+with open(sys.argv[1]) as f:
     for line in f:
         command = line.split()
         sub.run_command(command[0],

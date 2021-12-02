@@ -1,7 +1,9 @@
+import sys
+
 previous_reading = -1
 increases = 0
 
-with open("data") as f:
+with open(sys.argv[1]) as f:
     for line in f:
         reading = int(line)
         if previous_reading != -1:
